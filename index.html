@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4 Solution: Greetings Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 4 Solution: Greetings Assignment</h1>
+        <p>Open the console to see the output.</p>
+    </div>
+    <script>
+        // Wrap the entire contents of script.js inside an IIFE
+        (function () {
+            var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+
+            // Loop over the names array and say either 'Hello' or 'Good Bye'
+            for (var i = 0; i < names.length; i++) {
+                // Retrieve the first letter of the current name in the loop
+                var firstLetter = names[i].charAt(0).toLowerCase();
+
+                // Compare the 'firstLetter' retrieved to lower case 'j'
+                if (firstLetter === 'j') {
+                    // Print 'Good Bye' followed by the current name
+                    console.log("Good Bye " + names[i]);
+                } else {
+                    // Print 'Hello' followed by the current name
+                    console.log("Hello " + names[i]);
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
